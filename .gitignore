@@ -2,6 +2,7 @@
 .svn
 exam.iws
 build
+.gradle
 target
 *.iml
 *.ipr
