@@ -1,24 +1,19 @@
 apply plugin: 'java'
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '0.9.2'
+}
+
 sourceCompatibility = 1.5
 version = '1.0'
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Gradle Pax Exam Demo', 'Implementation-Version': version
-    }
-}
 
 repositories {
     mavenCentral()
-	mavenRepo name:'myrepo', urls:new File( System.getProperty( "user.home" ), ".m2/repository" ).toURL().toString()
+    mavenRepo name:'ops4j-snapshots' , urls: 'https://oss.sonatype.org/content/repositories/ops4j-snapshots'
 }
 
 dependencies {
     testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-junit4', version: '2.0.0-M2-SNAPSHOT'
     testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-container-paxrunner', version: '2.0.0-M2-SNAPSHOT'
 	testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-link-mvn', version: '2.0.0-M2-SNAPSHOT'
-}
-
-test {
-    systemProperties 'property': 'value'
 }
