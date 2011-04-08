@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-junit4', version: '2.0.0-RC3-SNAPSHOT'
-    testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-container-paxrunner', version: '2.0.0-RC3-SNAPSHOT'
-	testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-link-mvn', version: '2.0.0-RC3-SNAPSHOT'
+    testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-junit4', version: '2.0.0-RC3'
+    testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-container-paxrunner', version: '2.0.0-RC3'
+	testCompile group: 'org.ops4j.pax.exam', name: 'pax-exam-link-mvn', version: '2.0.0-RC3'
 }
